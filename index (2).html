@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Preguntas por Categoría</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    .boton-categoria {
+      padding: 15px 25px;
+      font-size: 16px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+    }
+    .cafe { background-color: #6f4e37; }
+    .verde { background-color: green; }
+    .beige { background-color: #d6b67d; color: black; }
+    .azul { background-color: #007bff; }
+    .rosa { background-color: deeppink; }
+    .cuadro {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 600px;
+      font-size: 18px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    #respuesta {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Preguntas por Categoría</h1>
+  <div>
+    <button class="boton-categoria cafe" onclick="mostrarPregunta('cafe')">Historia (Café)</button>
+    <button class="boton-categoria verde" onclick="mostrarPregunta('verde')">Ciencia (Verde)</button>
+    <button class="boton-categoria beige" onclick="mostrarPregunta('beige')">Arte y Literatura (Beige)</button>
+    <button class="boton-categoria azul" onclick="mostrarPregunta('azul')">Deportes (Azul)</button>
+    <button class="boton-categoria rosa" onclick="mostrarPregunta('rosa')">Entretenimiento (Rosa)</button>
+  </div>
+  <div id="pregunta" class="cuadro"></div>
+  <div id="respuesta" class="cuadro"></div>
+  <button onclick="mostrarRespuesta()">Mostrar Respuesta</button>
+  <script src="main.js"></script>
+</body>
+</html>
